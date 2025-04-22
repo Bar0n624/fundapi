@@ -1,4 +1,8 @@
 package com.ooad.fundapi.repository;
 
-public class AuthRepository {
+import java.sql.Date;
+
+public interface AuthRepository {
+    void invalidateToken(int userId);
+    void storeToken(int userId, String token, Date createdOn);
 }
